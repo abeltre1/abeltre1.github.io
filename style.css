@@ -152,6 +152,7 @@ ul.pubs li { margin: 0 0 12px; padding-left: 1.2em; text-indent: -1.2em; }
 .venue { font-weight: 700; font-size: .9rem; }
 ul.pubs a { text-decoration: none; }
 ul.pubs a:hover { text-decoration: underline; }
+.authors { color: var(--muted); font-size: .9rem; }
 .pub-year { /* used on pub.html */
   font-family: var(--serif);
   font-size: 1.1rem;
