@@ -1,214 +1,117 @@
-<!DOCTYPE HTML>
-<!--
-	Industrious by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abel Beltre</title>
+  <meta name="description" content="Personal academic homepage — HPC, cloud infrastructure, and AI systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <header class="site-header">
+    <a class="wordmark" href="index.html">A.&hairsp;Beltre</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="pub.html">Publications</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<ins class="adsbygoogle"
-           style="display:block"
-	        data-ad-format="fluid"
-	      data-ad-layout-key="-6t+ed+2i-1n-4w"
-            data-ad-client="ca-pub-2477380246218071"
-	         data-ad-slot="3456132343"></ins>
-		 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-		 </script>
+  <main>
 
-	<head>
+    <!-- ====================== HERO ====================== -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker">Systems Research &bull; HPC&ndash;Cloud Convergence &bull; AI Infrastructure</p>
+        <h1>Abel Beltre</h1>
+        <!-- TODO: edit title / affiliation -->
+        <p class="role">Computer Scientist &mdash; HPC &amp; AI Infrastructure</p>
+        <p class="affil"><a href="https://www.sandia.gov/">Sandia National Laboratories</a></p>
+        <p class="contact">Email: <span class="email">your.name at sandia.gov</span></p>
+        <p class="links">
+          <!-- TODO: replace # with your real profile URLs and CV file -->
+          <a href="#">LinkedIn</a>
+          <a href="#">Google Scholar</a>
+          <a href="#">GitHub</a>
+          <a href="cv.pdf">CV</a>
+        </p>
+      </div>
+      <figure class="portrait">
+        <!-- TODO: add your photo as images/portrait.jpg (~600px wide) -->
+        <img src="images/portrait.jpg" alt="Portrait of Abel Beltre"
+             onerror="this.parentElement.classList.add('placeholder')" />
+        <span class="portrait-fallback">Add<br/>images/portrait.jpg</span>
+      </figure>
+    </section>
 
-	<script data-ad-client="ca-pub-2477380246218071" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<title>Industrious by TEMPLATED</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script async src="https://www.paypalobjects.com/js/external/paypal-button.min.js" type="text/javascript"></script>
-	</head>
-	<body class="is-preload">
+    <!-- ====================== WELCOME ====================== -->
+    <section>
+      <h2>Welcome</h2>
+      <!-- TODO: edit this bio -->
+      <p>
+        I am a computer scientist working on high-performance computing and AI
+        infrastructure. My interests span HPC&ndash;cloud convergence, containerized
+        systems (Kubernetes/OpenShift, Podman), large-scale LLM inference serving
+        (vLLM), workload scheduling (SLURM, Flux, Kubernetes schedulers), and
+        agentic AI systems built on the Model Context Protocol. I hold a Ph.D. in
+        Computer Science and have over a decade of experience in cloud and AI
+        systems.
+      </p>
+      <p>
+        Before my current role, I worked on energy-aware orchestration for hybrid
+        quantum&ndash;classical computing and on deploying generative AI services at
+        HPC centers.
+      </p>
+    </section>
 
-		<!-- Header -->
-			<header id="header">
-				<a class="logo" href="index.html">Industrious</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+    <!-- ====================== SELECTED PUBLICATIONS ====================== -->
+    <section>
+      <div class="section-head">
+        <h2>Selected Publications</h2>
+        <a class="more" href="pub.html">View full list &rarr;</a>
+      </div>
+      <!-- TODO: replace these placeholder entries with your real papers.
+           Pattern: [VENUE YEAR] Title (link to pubs/file.pdf or DOI) -->
+      <ul class="pubs">
+        <li><span class="venue">[VENUE 2026]</span> <a href="#">Paper title goes here: replace with your most recent work</a> (to appear)</li>
+        <li><span class="venue">[VENUE 2025]</span> <a href="pubs/example.pdf">Containerized generative AI services at HPC centers</a></li>
+        <li><span class="venue">[VENUE 2024]</span> <a href="#">Energy-aware orchestration for hybrid quantum&ndash;classical workloads</a></li>
+        <li><span class="venue">[VENUE 2023]</span> <a href="#">HPC&ndash;cloud convergence: scheduling and resource fairness</a></li>
+      </ul>
+    </section>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="elements.html">Elements</a></li>
-					<li><a href="generic.html">Generic</a></li>
-				</ul>
-			</nav>
+    <!-- ====================== PROJECTS ====================== -->
+    <section>
+      <h2>Current Projects</h2>
+      <!-- TODO: edit / prune -->
+      <ul class="projects">
+        <li>
+          <strong>LLM-assisted HPC job intelligence.</strong>
+          Production MCP servers that expose SLURM and Flux schedulers to AI agents
+          for job analysis, triage, and capacity planning.
+        </li>
+        <li>
+          <strong>LLM serving characterization.</strong>
+          Performance and capacity modeling of vLLM + gateway inference stacks under
+          mixed interactive and agentic workloads.
+        </li>
+        <li>
+          <strong>Containerized MPI at scale.</strong>
+          Multi-node MPI execution in Podman/Apptainer containers with runtime ABI
+          translation across MPI implementations.
+        </li>
+      </ul>
+    </section>
 
-		<!-- Banner -->
-			<section id="banner">
-				<div class="inner">
-					<h1>Industrious</h1>
-					<p>A responsive business oriented template with a video background<br />
-					designed by <a href="https://templated.co/">TEMPLATED</a> and released under the Creative Commons License.</p>
-				</div>
-				<video autoplay loop muted playsinline src="images/banner.mp4"></video>
-			</section>
+  </main>
 
-		<!-- Highlights -->
-			<section class="wrapper">
-				<div class="inner">
-					<header class="special">
-						<h2>Sem turpis amet semper</h2>
-						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
-					</header>
-					<div class="highlights">
-						<section>
-							<div class="content">
-								<header>
-									<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
-									<h3>Feugiat consequat</h3>
-								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<header>
-									<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
-									<h3>Ante sem integer</h3>
-								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<header>
-									<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
-									<h3>Ipsum consequat</h3>
-								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<header>
-									<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
-									<h3>Interdum gravida</h3>
-								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<header>
-									<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-									<h3>Faucibus consequat</h3>
-								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<header>
-									<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
-									<h3>Accumsan viverra</h3>
-								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-							</div>
-						</section>
-					</div>
-				</div>
-			</section>
+  <footer>
+    <p>&copy; 2026 Abel Beltre &middot; Built with plain HTML/CSS &middot; Hosted on GitHub Pages</p>
+  </footer>
 
-		<!-- CTA -->
-			<section id="cta" class="wrapper">
-				<div class="inner">
-					<h2>Curabitur ullamcorper ultricies</h2>
-					<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
-				</div>
-			</section>
-
-		<!-- Testimonials -->
-			<section class="wrapper">
-				<div class="inner">
-					<header class="special">
-						<h2>Faucibus consequat lorem</h2>
-						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
-					</header>
-					<div class="testimonials">
-						<section>
-							<div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<blockquote>
-									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote>
-								<div class="author">
-									<div class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</div>
-									<p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<div class="content">
-						<section>
-							<h3>Accumsan montes viverra</h3>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
-						</section>
-						<section>
-							<h4>Sem turpis amet semper</h4>
-							<ul class="alt">
-								<li><a href="#">Dolor pulvinar sed etiam.</a></li>
-								<li><a href="#">Etiam vel lorem sed amet.</a></li>
-								<li><a href="#">Felis enim feugiat viverra.</a></li>
-								<li><a href="#">Dolor pulvinar magna etiam.</a></li>
-							</ul>
-						</section>
-
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
